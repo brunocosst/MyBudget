@@ -27,5 +27,18 @@ Aplicação simples para controle de despesas pessoais desenvolvida com React.
 ## Como executar
 
 ```bash
+Clone o repositório:
+
+git clone URL-DO-REPOSITORIO
+
+Entre na pasta:
+
+cd "..."
+
+Instale as dependências:
+
 npm install
-npm run dev
+
+Inicie o projeto:
+
+npm run dev Sobre o projeto
