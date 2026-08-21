@@ -4,7 +4,7 @@ Aplicação simples para controle de despesas pessoais desenvolvida com React.
 
 ## Preview
 
-![Preview do MyBudget](./docs/images/preview.png)
+![Preview do MyBudget](docs/images/preview.png)
 
 ## Funcionalidades
 
