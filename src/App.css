@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fafafa;
+  color: #1f1f1f;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 42px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.header p {
+  display: none;
+}
+
+.new-expense {
+  border: 1px solid #1f1f1f;
+  background: transparent;
+  padding: 9px 14px;
+  cursor: pointer;
+}
+
+.new-expense:hover {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+main {
+  display: grid;
+  gap: 34px;
+}
+
+/* TOTAL */
+
+.summary-card {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.summary-card span {
+  display: block;
+  margin-bottom: 6px;
+  color: #777;
+  font-size: 13px;
+}
+
+.summary-card h2 {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+/* CATEGORIAS */
+
+.categories {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.categories h2 {
+  margin: 0 0 16px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.category-item {
+  display: block;
+  padding: 16px 14px;
+  border-right: 1px solid #ddd;
+}
+
+.category-item:last-child {
+  border-right: none;
+}
+
+.category-item span {
+  display: block;
+  margin-bottom: 6px;
+  color: #777;
+  font-size: 12px;
+}
+
+.category-item strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* FILTRO */
+
+.transaction-filter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: -18px;
+}
+
+.transaction-filter label {
+  font-size: 12px;
+  color: #777;
+}
+
+.transaction-filter select {
+  border: none;
+  border-bottom: 1px solid #bbb;
+  background: transparent;
+  padding: 5px 22px 5px 4px;
+  outline: none;
+}
+
+/* LANÇAMENTOS */
+
+.transactions {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.transactions h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.transaction-list {
+  border-top: 1px solid #222;
+}
+
+.transaction-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 15px 4px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.transaction-item > div:first-child {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) 140px;
+  align-items: center;
+}
+
+.transaction-item > div:first-child strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.transaction-item span {
+  color: #777;
+  font-size: 13px;
+}
+
+.transaction-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.transaction-actions strong {
+  min-width: 100px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.edit-button,
+.delete-button {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: #777;
+  font-size: 12px;
+}
+
+.edit-button:hover {
+  color: #222;
+}
+
+.delete-button:hover {
+  color: #b42318;
+}
+
+/* ESTADO VAZIO */
+
+.empty-state {
+  padding: 30px 0;
+  border-top: 1px solid #222;
+  color: #888;
+  font-size: 13px;
+}
+
+/* MODAL */
+
+.form-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.expense-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 28px;
+  background: #fff;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.close-button {
+  border: none;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.expense-form label {
+  display: block;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #555;
+}
+
+.expense-form input,
+.expense-form select {
+  width: 100%;
+  margin-top: 7px;
+  padding: 9px 0;
+  border: none;
+  border-bottom: 1px solid #bbb;
+  background: transparent;
+  outline: none;
+}
+
+.expense-form input:focus,
+.expense-form select:focus {
+  border-bottom-color: #222;
+}
+
+.save-button {
+  width: 100%;
+  margin-top: 26px;
+  border: none;
+  background: #1f1f1f;
+  color: #fff;
+  padding: 11px;
+  cursor: pointer;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+  .app {
+    padding: 28px 18px;
+  }
+
+  .header {
+    margin-bottom: 32px;
+  }
+
+  .summary-card h2 {
+    font-size: 36px;
+  }
+
+  .category-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .transaction-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .transaction-item > div:first-child {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .transaction-actions {
+    justify-content: space-between;
+  }
+
+  .transaction-actions strong {
+    text-align: left;
+  }
+}
