@@ -26,19 +26,29 @@ Aplicação simples para controle de despesas pessoais desenvolvida com React.
 
 ## Como executar
 
-```bash
 Clone o repositório:
 
+```bash
 git clone URL-DO-REPOSITORIO
+```
 
-Entre na pasta:
+Entre na pasta do projeto:
 
-cd "..."
+```bash
+cd MyBudget
+```
 
 Instale as dependências:
 
+```bash
 npm install
+```
 
 Inicie o projeto:
 
-npm run dev Sobre o projeto
+```bash
+npm run dev
+```
+
+Depois, abra no navegador o endereço exibido no terminal.
+
